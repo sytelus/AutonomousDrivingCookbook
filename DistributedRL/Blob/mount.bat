@@ -1,0 +1,1 @@
+net use Z: \\airsimstorage.file.core.windows.net\distrl /u:AZURE\airsimstorage s9H/slfp5TSNST2z6QmL0fMwHnrnKzmuLN173zjPBvdB7uGTA2csV81Sexk939BWCVOAjz9nri7m8n54YZldig==

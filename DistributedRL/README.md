@@ -41,6 +41,7 @@ It is also highly recommended that the reader has familiarity with the AirSim si
 7. [Install AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy). Be sure to add the location for the AzCopy executable to your system path.
 8. [Install the latest verison of Azure Powershell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.3.0).
 9. [Install the latest version of the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
+10. Install Python packages `pip install azure-storage-file cryptography azure-batch azure-storage azure-storage-blob`.
 
 #### Simulator Package
 

@@ -1,0 +1,31 @@
+{
+	"id": "AirSimBatchPool",
+	"vmSize": "STANDARD_NV6",
+	"virtualMachineConfiguration": {
+		"imageReference": {
+			"virtualMachineImageId": "/subscriptions/dade0836-9f50-4fcb-93b5-ea9fe08b294d/resourceGroups/AirSimDistRL/providers/Microsoft.Compute/images/AirsimImage"
+		},
+		"nodeAgentSKUId": "batch.node.windows amd64"
+	},
+	"targetDedicatedNodes": 5,
+	"enableInterNodeCommunication": true,
+	"startTask": {
+		"commandLine": "C:\\ProgramData\\Anaconda3\\Scripts\\activate.bat py36 && python C:\\prereq\\setup_machine.py",
+		"resourceFiles": [{
+			"blobSource": "https://airsimstorage.blob.core.windows.net/prereq/setup_machine.py",
+			"filePath": "C:\\prereq\\setup_machine.py"
+		}, {
+			"blobSource": "https://airsimstorage.blob.core.windows.net/prereq/mount.bat",
+			"filePath": "C:\\prereq\\mount.bat"
+		}],
+		"userIdentity": {
+			"username": "airsim_batchuser"
+		},
+		"waitForSuccess": true
+	},
+	"userAccounts": [{
+		"name": "airsim_batchuser",
+		"password": "AirSimBatchUser01!",
+		"elevationLevel": "admin"
+	}]
+}
